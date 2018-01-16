@@ -195,6 +195,31 @@ export class MinePage {
           this.hidemodal = true;
         }
 
+        if(result.code == 403){
+          this.mineService.getToken().subscribe(res => {
+          if(res && res.code == 0){
+              this.globalData.token = res.value.token;
+              this.globalData.refreshToken = res.value.expires;
+              this.globalData.authTime = res.value.authTime;
+              let tokens = {
+                token:res.value.token,
+                refreshToken:res.value.expires,
+                authTime:res.value.authTime,
+              }
+              this.storage.set('token',tokens)
+              this.isLogin = false;
+              this.hidemodal = true;
+              
+          }else{
+            this.nativeService.showToast('秘钥获取失败!')
+          }
+          this.nativeService.hideLoading();
+        },err=>{
+            this.nativeService.hideLoading();
+            this.nativeService.showToast('网络错误!')
+        });
+        }
+
         if(result.code==0){
           let value = result.value;
           this.uinfo = value;

@@ -3,6 +3,7 @@ import { IonicModule } from 'ionic-angular';
 import { MinePage } from './mine';
 import { WalletPage } from './wallet/wallet';
 import { DownPage } from './down/down';
+import { DowninfoPage } from './downinfo/downinfo';
 import { CasePage } from './case/case';
 import { CaseinfoPage } from './caseinfo/caseinfo';
 import { CollectPage } from './collect/collect';
@@ -24,8 +25,8 @@ import { Wechats } from './../../providers/Wechats';
 
 @NgModule({
   imports: [ IonicModule, ],
-  declarations: [ MinePage, GtaskPage,CollectPage,GtaskinfoPage,RolePage,InfoPage,UpdateinfoPage,CertifyPage,WalletPage,DownPage,CasePage,CaseinfoPage,SafePage,UserPage,BindemailPage,RechargePage,CashPage,AboutPage,HelpPage,HelpinfoPage, ],
-  entryComponents:[MinePage, GtaskPage,CollectPage,GtaskinfoPage,RolePage,InfoPage,UpdateinfoPage,CertifyPage,WalletPage,DownPage,CasePage,CaseinfoPage,SafePage,UserPage,BindemailPage,RechargePage,CashPage,AboutPage,HelpPage,HelpinfoPage, ],
+  declarations: [ MinePage, GtaskPage,CollectPage,GtaskinfoPage,RolePage,InfoPage,UpdateinfoPage,CertifyPage,WalletPage,DownPage,DowninfoPage,CasePage,CaseinfoPage,SafePage,UserPage,BindemailPage,RechargePage,CashPage,AboutPage,HelpPage,HelpinfoPage, ],
+  entryComponents:[MinePage, GtaskPage,CollectPage,GtaskinfoPage,RolePage,InfoPage,UpdateinfoPage,CertifyPage,WalletPage,DownPage,DowninfoPage,CasePage,CaseinfoPage,SafePage,UserPage,BindemailPage,RechargePage,CashPage,AboutPage,HelpPage,HelpinfoPage, ],
   providers:[Wechats],
   exports: [IonicModule]
 

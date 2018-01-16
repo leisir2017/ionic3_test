@@ -93,7 +93,7 @@ export class GtaskPage {
     }else if(this.type==2){
       this.status = num;
 
-        this.mineService.getDemand({s:this.type,status:num}).subscribe(res=>{
+        this.mineService.getDemand({status:num}).subscribe(res=>{
           if(res.code==0){
             this.demand = res.value;
           }

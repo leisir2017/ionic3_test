@@ -248,11 +248,11 @@ export class DemandPage {
     }
     if(type=='status'){
         this.params.status = id;
-    
     }
     if(type=='amount'){
         this.params.amount = id;
     }
+    console.log(this.params.status)
     this.nowpage = 1;
     this.params.page = 1;
   }
@@ -320,9 +320,7 @@ export class DemandPage {
   // 确定筛选框
   confirmCate(){
     this.showCate = false;
-    if(this.params.status==-1){
-      this.params.status = 0;
-    }
+    
     this.nowpage = 1;
     this.params.page = 1;
     this.demandService.getList2(this.params).subscribe(res => {
@@ -451,6 +449,14 @@ export class DemandPage {
   getData(order){
     this.menu = order;
     this.params.order = order;
+    this.params.page = 1;
+    this.params.status = -1;
+    this.params.amount = -1;
+    this.params.design = 0;
+    this.params.designchild = 0;
+    this.cate = 0;
+    this.cateson = 0;
+    this.params.child = 0;
     this.keywords = '';
     let parma : any = {order:order};
     if(order==3){

@@ -127,6 +127,10 @@ export class MineService {
       return this.httpService.get( 'user/mydown',param).map((res: Response) => res.json());
   }
 
+  getDownDetail( id ){
+      return this.httpService.get( 'user/mydowninfo/'+id).map((res: Response) => res.json());
+  }
+
   getDowncate(){
       return this.httpService.get( 'user/downcate').map((res: Response) => res.json());
   }

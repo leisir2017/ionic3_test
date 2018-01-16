@@ -28,17 +28,27 @@
      <div class="case_section case_pic">
        <h3 class="tit">案例图片</h3>
        <div class="slide_pic_wrap">
-        <ion-slides *ngIf="info.image > 1" loop="true" pager zoom="true" autoplay='4000' style="background-color: white">
-          <ion-slide *ngFor="let b of info.image">
-                <img data-src="{{b.url}}">
-          </ion-slide>
-        </ion-slides>
+       
+
+
+        <div class="swipe01">
+
+          <ion-slides *ngIf="info.image" loop="true" pager zoom="true" autoplay='4000' style="background-color: white">
+            <ion-slide *ngFor="let b of info.image">
+                  <img data-src="{{b.url}}">
+            </ion-slide>
+          </ion-slides>
+        
+          
+        </div>
+
+
          
        </div>
       
     </div>
     <div class="case_section case_request">
-       <h3 class="tit">需求描述</h3>
+       <h3 class="tit">案例描述</h3>
        <p>{{info.content}}</p>
     </div>
     <div class="case_section adr_time">

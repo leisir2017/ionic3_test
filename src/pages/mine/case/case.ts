@@ -13,7 +13,7 @@ export class CasePage {
   status: any = '';
   constructor(
   private navController: NavController,
-        private viewCtrl: ViewController,
+  private viewCtrl: ViewController,
   private mineService: MineService
   ) {
     
@@ -33,7 +33,7 @@ export class CasePage {
   }
 
   ionViewDidLoad(){
-    this.getCase({s:1});
+    this.getCase({a:1});
   }
 
   getCase(param){

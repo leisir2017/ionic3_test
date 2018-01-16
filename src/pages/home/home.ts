@@ -181,6 +181,7 @@ export class HomePage {
 
 
   goDemand(){
+    this.navCtrl.parent.select(1);
   }
 
 }

@@ -21,13 +21,13 @@
     </ion-refresher>
     <div *ngIf="!pipei">
     <div class="list_cont_wrap">
-      <ul class="list_tab">
+      <ul class="list_tab" style="position: fixed;top: 44px;">
         <li class="tabitem" (click)="getData(2)" [ngClass]="{'active': menu==2}"><a href="#">热门任务</a></li>
         <li class="tabitem" (click)="getData(1)" [ngClass]="{'active': menu==1}"><a href="#">最新发布</a></li>
         <li class="tabitem" (click)="getData(3)" [ngClass]="{'active': menu==3}"><a href="#">加急任务</a></li>
         <li (click)="doCate()" class="select_item" [ngClass]="{'active': showCate==true}"><a href="#">筛选</a></li>
       </ul>
-      <ul class="list" *ngIf="!showCate">
+      <ul class="list" *ngIf="!showCate" style="margin-top: 44px;">
         <li class="list_item" *ngFor="let item of list" (click)="itemClick(item)">
             <div class="money_name">
               <span>￥{{item.reward}}</span>

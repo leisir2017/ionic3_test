@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController,ViewController } from 'ionic-angular';
 import { MineService } from "../MineService";
-import { GtaskinfoPage } from "../gtaskinfo/gtaskinfo";
+import { DowninfoPage } from "../downinfo/downinfo";
 
 @Component({
   selector: 'page-down',
@@ -22,15 +22,15 @@ export class DownPage {
 
   ionViewDidLoad(){
     this.getDataCate();
-    this.getData({s:1})
+    this.getData({c:1})
   }
   
   back(){
     this.viewCtrl.dismiss();
   }
 
-	info(){
-		this.navController.push(GtaskinfoPage)
+	info(item){
+		this.navController.push(DowninfoPage,{info:item})
 	}
 
   setCate(cate){

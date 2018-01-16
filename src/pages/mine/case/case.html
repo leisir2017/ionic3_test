@@ -18,9 +18,9 @@
    <div class="ucontent_wrap">
      
       <div class="ucase_tab">
-       <span (click)="menu(NULL)" [ngClass]="{'active':status==NULL}">全部</span>
+       <span (click)="menu('')" [ngClass]="{'active':status===''}">全部</span>
        <span (click)="menu(1)" [ngClass]="{'active':status==1}">审核通过</span>
-       <span (click)="menu(0)" [ngClass]="{'active':status==0}">审核中</span>
+       <span (click)="menu(0)" [ngClass]="{'active':status===0}">审核中</span>
        <span (click)="menu(2)" [ngClass]="{'active':status==2}">审核未通过</span>
      </div>
      <div class="ucase_wrap">

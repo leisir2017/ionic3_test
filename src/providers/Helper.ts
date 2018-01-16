@@ -71,7 +71,7 @@ export class Helper {
               } else {
                 this.alertCtrl.create({
                   title: '升级',
-                  subTitle: '发现新版本,是否立即升级？',
+                  subTitle: '发现新版本,更新安装后将自动退出，是否立即升级？',
                   enableBackdropDismiss: false,
                   buttons: [
                     {
