@@ -51,7 +51,7 @@ export class HomePage {
 
   ionViewWillEnter() {  
 
-    setTimeout(() => { //2秒内没有再次
+    setTimeout(() => { //2秒内没有再次 test
        if(this.list.length<1){
           this.getToken();
         }
